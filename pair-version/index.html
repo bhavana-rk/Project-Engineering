@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donewell | Task Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <p class="kicker">TODAY'S WORK</p>
+        <h1 id="app-title">Donewell</h1>
+        <p class="subtitle">Small steps, visibly finished.</p>
+      </header>
+      <section class="workspace" aria-labelledby="app-title">
+        <form id="task-form" class="new-task">
+          <label class="sr-only" for="task-title">Task title</label>
+          <input
+            id="task-title"
+            type="text"
+            placeholder="Add a task"
+            autocomplete="off"
+            required
+          />
+          <button type="submit" aria-label="Add task">Add</button>
+        </form>
+        <nav class="filters" aria-label="Filter tasks">
+          <button class="filter is-selected" type="button" data-filter="all">
+            All
+          </button>
+          <button class="filter" type="button" data-filter="active">
+            Active
+          </button>
+          <button class="filter" type="button" data-filter="completed">
+            Completed
+          </button>
+        </nav>
+        <ul id="task-list" class="task-list" aria-live="polite"></ul>
+        <p id="empty-state" class="empty-state">No tasks in this view.</p>
+        <p id="task-count" class="task-count">0 tasks remaining</p>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

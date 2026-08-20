@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daymark | Task Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="app" aria-labelledby="app-title">
+        <div class="eyebrow">PERSONAL WORKSPACE</div>
+        <h1 id="app-title">Daymark</h1>
+        <p class="intro">A clear place for what needs doing.</p>
+
+        <form id="task-form" class="task-entry">
+          <label class="sr-only" for="task-title">Task title</label>
+          <input
+            id="task-title"
+            name="title"
+            type="text"
+            placeholder="What needs your attention?"
+            autocomplete="off"
+            required
+          />
+          <button type="submit">
+            Add task <span aria-hidden="true">+</span>
+          </button>
+        </form>
+
+        <div class="toolbar" aria-label="Task filters">
+          <span id="visible-label" class="list-label">ALL TASKS</span>
+          <div class="filters" role="group" aria-label="Filter tasks">
+            <button class="filter active" data-filter="all" type="button">
+              All
+            </button>
+            <button class="filter" data-filter="active" type="button">
+              Active
+            </button>
+            <button class="filter" data-filter="completed" type="button">
+              Completed
+            </button>
+          </div>
+        </div>
+
+        <ul id="task-list" class="task-list" aria-live="polite"></ul>
+        <p id="empty-state" class="empty-state">
+          Your list is ready for its first mark.
+        </p>
+        <footer id="task-count">0 tasks remaining</footer>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
