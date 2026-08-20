@@ -45,8 +45,13 @@ Fill out the following table after completing both versions:
 
 ## How to Submit
 
-1. **PR Link:** Pending public repository access
+1. **PR Link:** https://github.com/bhavana-rk/Project-Engineering/pull/new/task-manager-comparison
 2. **Video Link:** Pending recording and hosting access
+
+## Branch Submission
+
+The implementation is published on the `task-manager-comparison` branch so it can
+be reviewed against `main` in a pull request.
 
 ## Local Verification
 
